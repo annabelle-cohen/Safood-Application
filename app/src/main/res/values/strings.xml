@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Safood</string>
+    <string name="signUp">Sign Up</string>
+    <string name="signIn">Sign In</string>
+    <string name="slogan">Updated in real time</string>
+
+    /----------main - firstPage with video background---
+    <string name="resources">android.resource://</string>
+    <string name="video">video</string>
+    <string name="setOnErrorListener">setOnErrorListener</string>
+
+    /----------Sign in/ Sign up -----------------------
+    <string name="textForProgressBar">Please wait...</string>
+    <string name="hintPhone">Phone Number</string>
+    <string name="hintPass">Password</string>
+    <string name="confirmPass">Confirm Password</string>
+
+</resources>

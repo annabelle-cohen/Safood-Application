@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "573096092619",
+    "project_id": "safood-1be12",
+    "storage_bucket": "safood-1be12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573096092619:android:c1c2c2f5dd389239cb4c4e",
+        "android_client_info": {
+          "package_name": "com.example.safood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573096092619-3ota8qvmp9ea82aa392gpg82homcf51t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.safood",
+            "certificate_hash": "7064df345a16d89e5d6912d010e2eeff653d9840"
+          }
+        },
+        {
+          "client_id": "573096092619-d03080lgjqsldpe510jtt6du7j962nfk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFWbDctoQp-7vvFMvpdnWu5zYKkSXByEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573096092619-d03080lgjqsldpe510jtt6du7j962nfk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
