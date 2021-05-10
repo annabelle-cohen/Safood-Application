@@ -14,5 +14,21 @@
     <string name="hintPhone">Phone Number</string>
     <string name="hintPass">Password</string>
     <string name="confirmPass">Confirm Password</string>
+    <string name="phone_must_be_10digits">Phone Number must include 10 digits</string>
+    <string name="phone_number_format">Phone Number must start with \'05\'</string>
+    <string name="phone_must_include_only_digits">Phone Number must include only 10 digits</string>
+    <string name="maxPassError">Password max characters is 11!</string>
+    <string name="error_empty">Field can\'t be empty</string>
+    <string name="confirmationFaild">Confirmation failed</string>
+
+    /--------Questaniar-----------------------------------------
+    <string name="quest_title">select your interesion content:</string>
+    <string name="Vegetarianism">Vegetarianism</string>
+    <string name="Infant">Infant</string>
+    <string name="Gluten_free">Gluten free</string>
+    <string name="Pets">Pets</string>
+    <string name="Lactose_free">Lactose free</string>
+    <string name="select_all">Select All</string>
+     <string name="continue_">Continue</string>
 
 </resources>

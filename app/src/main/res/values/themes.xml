@@ -20,6 +20,9 @@
     <style name="ButtonColor2" parent="@android:style/Widget.Button">
         <item name="colorPrimary">@color/white</item>
     </style>
+    <style name="ButtonColor3" parent="@android:style/Widget.Button">
+        <item name="colorPrimary">@color/greenSelect</item>
+    </style>
 <style name="textInput">
     <item name="colorPrimary">@color/white</item>
 </style>
