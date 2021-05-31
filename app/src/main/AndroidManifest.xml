@@ -10,7 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Safood">
-        <activity android:name=".QuestActivity"   android:hardwareAccelerated="false" ></activity>
+        <activity android:name=".HomeSafood"></activity>
+        <activity android:name=".SignUp_Congrats" />
+        <activity
+            android:name=".QuestActivity"
+            android:hardwareAccelerated="false" />
         <activity
             android:name=".SignUp_Activity"
             android:hardwareAccelerated="false" />

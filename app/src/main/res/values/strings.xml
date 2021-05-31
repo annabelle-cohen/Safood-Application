@@ -20,6 +20,8 @@
     <string name="maxPassError">Password max characters is 11!</string>
     <string name="error_empty">Field can\'t be empty</string>
     <string name="confirmationFaild">Confirmation failed</string>
+    <string name="wrongPass">Failed to login!wrong password</string>
+    <string name="userNotExist">User doesn\'t exist!</string>
 
     /--------Questaniar-----------------------------------------
     <string name="quest_title">select your interesion content:</string>
@@ -29,6 +31,7 @@
     <string name="Pets">Pets</string>
     <string name="Lactose_free">Lactose free</string>
     <string name="select_all">Select All</string>
-     <string name="continue_">Continue</string>
+    <string name="continue_">Continue</string>
+    <string name="def">"none</string>
 
 </resources>

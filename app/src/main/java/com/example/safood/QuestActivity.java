@@ -2,14 +2,15 @@ package com.example.safood;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.Toast;
 
 import com.example.safood.Common.Common;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,9 @@ public class QuestActivity extends AppCompatActivity {
     private CheckBox vega,infant,gluFree,pets,lacFree;
     private Button mContinue,mSelectAll;
     private ArrayList<String> results;
+    private FirebaseDatabase db;
+    private DatabaseReference users;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,9 @@ public class QuestActivity extends AppCompatActivity {
         mSelectAll =findViewById(R.id.btnSelectAll);
 
         results = new ArrayList<>();
+        db = FirebaseDatabase.getInstance();
+        users= db.getReference("Users");
+
 
         vega.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,15 +129,26 @@ public class QuestActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 StringBuilder stringBuilder = new StringBuilder();
+                if(results.size()>0) {
+                    for (String s : results)
+                        stringBuilder.append(s + " ");
 
-                for(String s:results)
-                    stringBuilder.append(s+" ");
-
-                Common.currentUser.setChoice(stringBuilder.toString());
+                    Common.currentUser.setChoice(stringBuilder.toString());
+                }else{
+                    Common.currentUser.setChoice(getString(R.string.def));
+                }
+                    sendData();
 
             }
         });
 
 
+    }
+
+    private void sendData() {
+       users.child(Common.currentUser.getPhone()).setValue(Common.currentUser);
+       Common.currentUser=null;
+        Intent signUpCongrats = new Intent(QuestActivity.this,SignUp_Congrats.class);
+        startActivity(signUpCongrats);
     }
 }
