@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="165dp"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="@drawable/foodheader"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_marginLeft="40dp"
+        android:translationY="15dp"
+        android:layout_height="95dp"
+        android:src="@drawable/ic_baseline_person_24"
+        android:background="@drawable/custom_img_profile"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/user_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:textSize="15dp"
+       android:translationX="126dp"
+        android:translationY="-7dp"
+        android:text="phone number"
+        android:textColor="@color/cardview_dark_background"
+        android:textStyle="bold">
+    </TextView>
+
+</LinearLayout>

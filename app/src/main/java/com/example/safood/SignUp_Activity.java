@@ -86,6 +86,7 @@ public class SignUp_Activity extends AppCompatActivity {
                 // loadingDialog.dismissDialog();
             }
         },3000);
+        finish();
     }
 
 

@@ -127,5 +127,6 @@ public class MainActivity extends AppCompatActivity {
                 loadingDialog.dismissDialog();
             }
         },3000);
+
     }
 }

@@ -33,5 +33,32 @@
     <string name="select_all">Select All</string>
     <string name="continue_">Continue</string>
     <string name="def">"none</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="later">Later!</string>
+    <string name="first_experience">Lets start!</string>
+    <string name="register_successfully_1">You have successfully registered to Safood!</string>
+    <string name="register_successfully_2">We hope you get the best out of our app,</string>
+    <string name="register_successfully_3">Wishing you lots of health and safe food!</string>
 
+    /----------------fail to connect------------------------
+    <string name="fail">fail</string>
+    <string name="mustImplement"> must implement FragmentHomeContentListener</string>
+    <string name="mustImplementSuccess"> must implement FragmentSucceedListener</string>
+
+    /-------------menu---------------------------------
+    <string name="home">Home</string>
+    <string name="EditProfile">Edit Profile</string>
+    <string name="Definitions">Definitions</string>
+    <string name="NotificationHistory">Notification History</string>
+    <string name="LogOut">Log Out</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="contactUs">Contact Us, Let Us Know!</string>
+    <string name="Contact">Contact:+9742300388,Israel</string>
+    <string name="logo">© Safood</string>
+
+    /----------Home Content---------------------------
+    <string name="Articles">Food News!find out how to take care about your food</string>
+    <string name="All_Notification">All Notifications</string>
 </resources>

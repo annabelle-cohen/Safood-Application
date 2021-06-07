@@ -150,5 +150,6 @@ public class QuestActivity extends AppCompatActivity {
        Common.currentUser=null;
         Intent signUpCongrats = new Intent(QuestActivity.this,SignUp_Congrats.class);
         startActivity(signUpCongrats);
+        finish();
     }
 }
