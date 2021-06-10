@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fargments.DefinitionsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grad">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Definitions"
+                android:textSize="20sp"
+                android:textColor="@color/darkGray"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:fontFamily="@font/handlee"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                android:textColor="@color/darkGray"
+                android:inputType="phone"
+                android:textColorHint="@android:color/tertiary_text_light"
+                android:textSize="15sp"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/checkboxDefintions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="-17dp"
+            android:paddingLeft="100dp"
+            android:paddingRight="50dp"
+            android:gravity="left|center_vertical"
+            android:visibility="gone"
+
+            android:layout_alignParentLeft="true"
+            >  <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="select your interesion content:"
+            android:layout_gravity="center_horizontal"></TextView>
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Vegetarianism"
+                android:layoutDirection="ltr"
+                android:id="@+id/vegetarianism"></CheckBox>
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:text="@string/Infant"
+                android:id="@+id/infant"
+                ></CheckBox>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:text="@string/Gluten_free"
+                android:id="@+id/gluten_free"></CheckBox>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:text="@string/Pets"
+                android:id="@+id/pets">
+
+            </CheckBox>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:text="@string/Lactose_free"
+                android:id="@+id/lactose_free"></CheckBox>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_button_edit_def"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="290dp"
+        android:backgroundTint="@color/lightBlue"
+        android:src="@drawable/ic_create_black_24dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <LinearLayout
+        android:id="@+id/ButtonsDef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/btnSelectAll2"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_btn_signup"
+            android:text="@string/select_all"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/darkGray"
+            android:theme="@style/ButtonColor3" />
+        <Button
+            android:id="@+id/btnContinue2"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_btn_signup"
+            android:text="@string/Update"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/darkGray"
+            android:theme="@style/ButtonColor" />
+    </LinearLayout>
+
+</RelativeLayout >

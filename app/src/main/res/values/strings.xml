@@ -61,4 +61,24 @@
     /----------Home Content---------------------------
     <string name="Articles">Food News!find out how to take care about your food</string>
     <string name="All_Notification">All Notifications</string>
+    /----------Edit Profile---------------------------
+    <string name="phone">Phone Number:</string>
+    <string name="password">Password:</string>
+    <string name="Update">Update</string>
+    <string name="mustImplementEditProfile">must implement EditProfileListener</string>
+    <string name="Password">password</string>
+
+    /----------Definitions---------------------------
+    <string name="select">Select</string>
+    <string name="choice">choice</string>
+
+    /---------Articles-----------------------------
+    <string name="Article">Articles</string>
+    <string name="Title">Title</string>
+    <string name="image">image</string>
+
+    /------Article Info---------------------------
+    <string name="btnBack">Back!</string>
+    <string name="content">content!</string>
+
 </resources>

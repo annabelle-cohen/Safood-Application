@@ -17,6 +17,8 @@ import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.safood.Common.Common;
+import com.example.safood.Fargments.DefinitionsFragment;
+import com.example.safood.Fargments.EditProfileFragment;
 import com.example.safood.Fargments.HomeContentFragment;
 import com.example.safood.Model.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,7 +26,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,HomeContentFragment.FragmentHomeContentListener {
+public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,HomeContentFragment.FragmentHomeContentListener, EditProfileFragment.EditProfileListener, DefinitionsFragment.UpdateUserListener {
 
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
@@ -52,6 +54,9 @@ public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity impl
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        database = FirebaseDatabase.getInstance();
+        users=database.getReference("Users");
+
         //default fragment as we begin is the home contentp
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeContentFragment()).commit();
@@ -70,12 +75,12 @@ public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity impl
                         new HomeContentFragment()).commit();
                 break;
             case R.id.EditProfile:
-             /*   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new EditProfileFragment()).commit();*/
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new EditProfileFragment()).commit();
                 break;
             case R.id.Definitions:
-              /*  getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new DefinitionsFragment()).commit();*/
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new DefinitionsFragment()).commit();
                 break;
             case R.id.NotificationHistory:
              /*   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -111,11 +116,21 @@ public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity impl
 
     @Override
     public void moveToFoodNews() {
-        //need intent
+        startActivity(new Intent(HomeSafood.this,ArticlesActivity.class));
     }
 
     @Override
     public void moveToAllNotifications() {
     //need intent
+    }
+
+    @Override
+    public void updatePassword(String password) {
+        users.child(Common.currentUser.getPhone()).child(getString(R.string.Password)).setValue(password);
+    }
+
+    @Override
+    public void updateChoice(String choice) {
+        users.child(Common.currentUser.getPhone()).child(getString(R.string.choice)).setValue(choice);
     }
 }
