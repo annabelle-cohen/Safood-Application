@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/graymarble"
+    tools:context=".NotificationInfoActivity">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="400dp"
+        android:layout_height="530dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/img_info_notification"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:scaleType="centerInside"
+                android:paddingBottom="10dp"
+                android:src="@drawable/food">
+            </ImageView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/subject_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Title"
+            android:textSize="30dp"
+            android:fontFamily="@font/handlee"
+            android:paddingBottom="20dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/contentInfoNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/content"
+            android:textSize="15dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/black"
+            android:scrollbars="vertical"
+            >
+        </TextView>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backNotification"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custom_img_profile"
+        android:textColor="@color/white"
+        android:text="@string/btnBack"
+        android:layout_marginBottom="5dp"
+        android:textAllCaps="false">
+
+    </Button>
+
+</RelativeLayout>

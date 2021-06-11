@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Safood">
-        <activity android:name=".ArticleInfo"></activity>
+        <activity android:name=".NotificationInfoActivity"></activity>
+        <activity android:name=".AllNotificationsActivity" />
+        <activity android:name=".ArticleInfo" />
         <activity android:name=".ArticlesActivity" />
         <activity android:name=".HomeSafood" />
         <activity android:name=".SignUp_Congrats" />

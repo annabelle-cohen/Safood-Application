@@ -20,6 +20,7 @@ import com.example.safood.Common.Common;
 import com.example.safood.Fargments.DefinitionsFragment;
 import com.example.safood.Fargments.EditProfileFragment;
 import com.example.safood.Fargments.HomeContentFragment;
+import com.example.safood.Fargments.NotificationsHistoryFragment;
 import com.example.safood.Model.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -83,8 +84,8 @@ public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity impl
                         new DefinitionsFragment()).commit();
                 break;
             case R.id.NotificationHistory:
-             /*   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new GameHistoryFragment()).commit();*/
+               getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new NotificationsHistoryFragment()).commit();
                 break;
             case R.id.nav_company_name:
                 Toast.makeText(this,getResources().getString(R.string.app_name),Toast.LENGTH_SHORT).show();
@@ -121,7 +122,7 @@ public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity impl
 
     @Override
     public void moveToAllNotifications() {
-    //need intent
+        startActivity(new Intent(HomeSafood.this,AllNotificationsActivity.class));
     }
 
     @Override
