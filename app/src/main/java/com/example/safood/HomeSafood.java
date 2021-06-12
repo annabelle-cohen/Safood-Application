@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,10 +24,14 @@ import com.example.safood.Fargments.EditProfileFragment;
 import com.example.safood.Fargments.HomeContentFragment;
 import com.example.safood.Fargments.NotificationsHistoryFragment;
 import com.example.safood.Model.User;
+import com.example.safood.Service.FirebasePushNotificationsService;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,HomeContentFragment.FragmentHomeContentListener, EditProfileFragment.EditProfileListener, DefinitionsFragment.UpdateUserListener {
 
@@ -64,8 +70,15 @@ public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity impl
             navigationView.setCheckedItem(R.id.Home);
         }
 
-        updateHeader(Common.currentUser);
+            updateHeader(Common.currentUser);
+
+            Intent BackgroundServiceIntent = new Intent(this, FirebasePushNotificationsService.class);
+            startService(BackgroundServiceIntent);
+
+
     }
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

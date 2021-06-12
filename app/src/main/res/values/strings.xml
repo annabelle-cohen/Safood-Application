@@ -83,5 +83,7 @@
 
     /-----All Notification------------------------
     <string name="clickReadMore">Click To Read More</string>
-
+    <string name="default_notification_channel_id"
+        >Defualt channel id</string>
+    <string name="msg_token_fmt">Connect token</string>
 </resources>
