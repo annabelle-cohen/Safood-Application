@@ -26,6 +26,8 @@ import com.example.safood.Fargments.NotificationsHistoryFragment;
 import com.example.safood.Model.User;
 import com.example.safood.Service.FirebasePushNotificationsService;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -42,6 +44,7 @@ public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity impl
     private TextView mTextView_Phone;
     private FirebaseDatabase database;
     private DatabaseReference users;
+    private static final String TAG = HomeSafood.class.getSimpleName();
 
 
 
@@ -72,13 +75,18 @@ public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity impl
 
             updateHeader(Common.currentUser);
 
-            Intent BackgroundServiceIntent = new Intent(this, FirebasePushNotificationsService.class);
-            startService(BackgroundServiceIntent);
-
-
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d(TAG, "On New Intent called");
+    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

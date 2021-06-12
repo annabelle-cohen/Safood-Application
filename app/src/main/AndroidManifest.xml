@@ -16,7 +16,7 @@
         <activity android:name=".AllNotificationsActivity" />
         <activity android:name=".ArticleInfo" />
         <activity android:name=".ArticlesActivity" />
-        <activity android:name=".HomeSafood" />
+        <activity android:name=".HomeSafood" android:launchMode="singleTop"/>
         <activity android:name=".SignUp_Congrats" />
         <activity
             android:name=".QuestActivity"
@@ -44,6 +44,7 @@
 
         <service android:name=".Service.FirebasePushNotificationsService" android:exported="false" android:directBootAware="true">
             <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
                 <action android:name="android.intent.action.RESPOND_VIA_MESSAGE"></action>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
