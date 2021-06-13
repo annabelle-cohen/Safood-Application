@@ -113,6 +113,8 @@ public class DefinitionsFragment extends Fragment {
         //check who is already chose
         this.updateFirst();
 
+        edtPhone.setText(Common.currentUser.getPhone());
+
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,7 +163,9 @@ public class DefinitionsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(vega.isChecked()){
-                    results.add(getString(R.string.Vegetarianism));
+                    if(!results.contains(getString(R.string.Vegetarianism))) {
+                        results.add(getString(R.string.Vegetarianism));
+                    }
                 }else{
                     results.remove(getString(R.string.Vegetarianism));
                 }
@@ -172,7 +176,9 @@ public class DefinitionsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(infant.isChecked()){
-                    results.add(getString(R.string.Infant));
+                    if(!results.contains(getString(R.string.Infant))) {
+                        results.add(getString(R.string.Infant));
+                    }
                 }else{
                     results.remove(getString(R.string.Infant));
                 }
@@ -183,7 +189,9 @@ public class DefinitionsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(gluFree.isChecked()){
-                    results.add(getString(R.string.Gluten_free));
+                    if(!results.contains(getString(R.string.Gluten_free))) {
+                        results.add(getString(R.string.Gluten_free));
+                    }
                 }else{
                     results.remove(getString(R.string.Gluten_free));
                 }
@@ -194,7 +202,9 @@ public class DefinitionsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(pets.isChecked()){
-                    results.add(getString(R.string.Pets));
+                    if(!results.contains(getString(R.string.Pets))) {
+                        results.add(getString(R.string.Pets));
+                    }
                 }else{
                     results.remove(getString(R.string.Pets));
                 }
@@ -204,7 +214,9 @@ public class DefinitionsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(lacFree.isChecked()){
-                    results.add(getString(R.string.Lactose_free));
+                    if(!results.contains(getString(R.string.Lactose_free))) {
+                        results.add(getString(R.string.Lactose_free));
+                    }
                 }else{
                     results.remove(getString(R.string.Lactose_free));
                 }
@@ -263,21 +275,26 @@ public class DefinitionsFragment extends Fragment {
         for(int i = 0 ;i<unMarshallin.length;i++){
           if(unMarshallin[i].equals(getString(R.string.Vegetarianism))){
               vega.setChecked(true);
+              results.add(getString(R.string.Vegetarianism));
           }
           if(unMarshallin[i].equals(getString(R.string.Infant))){
               infant.setChecked(true);
+              results.add(getString(R.string.Infant));
           }
 
           if(unMarshallin[i].equals("Gluten")){
                 gluFree.setChecked(true);
+              results.add(getString(R.string.Gluten_free));
             }
 
           if(unMarshallin[i].equals(getString(R.string.Pets))){
               pets.setChecked(true);
+              results.add(getString(R.string.Pets));
           }
 
           if(unMarshallin[i].equals("Lactose")){
               lacFree.setChecked(true);
+              results.add(getString(R.string.Lactose_free));
           }
         }
     }

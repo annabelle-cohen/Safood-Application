@@ -74,6 +74,8 @@ public class HomeSafood<onNavigationItemSelected> extends AppCompatActivity impl
         }
 
             updateHeader(Common.currentUser);
+        Intent firebaseService = new Intent(HomeSafood.this,FirebasePushNotificationsService.class);
+        startService(firebaseService);
 
     }
 

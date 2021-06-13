@@ -55,23 +55,23 @@ public class FirebasePushNotificationsService extends FirebaseMessagingService {
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 String phone = Common.currentUser.getPhone();
                 User user = snapshot.child(phone).getValue(User.class);
-                String[] choicecs = user.getChoice().split(" ");
-                //fixing array of choices
+                   String[] choicecs = user.getChoice().split(" ");
+                   //fixing array of choices
+                   for (int i = 0; i < choicecs.length; i++) {
+                       FirebaseMessaging.getInstance().subscribeToTopic(choicecs[i]).addOnSuccessListener(new OnSuccessListener<Void>() {
+                           @Override
+                           public void onSuccess(Void aVoid) {
+                               //Toast.makeText(MainActivity.this, "UnSubscribed to " + topic, Toast.LENGTH_SHORT).show();
 
-                for (int i =0 ;i<choicecs.length;i++){
-                    FirebaseMessaging.getInstance().unsubscribeFromTopic(choicecs[i]).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            //Toast.makeText(MainActivity.this, "UnSubscribed to " + topic, Toast.LENGTH_SHORT).show();
+                           }
+                       }).addOnFailureListener(new OnFailureListener() {
+                           @Override
+                           public void onFailure(@NonNull Exception e) {
+                               // Toast.makeText(MainActivity.this, "Failed to unsubscribe", Toast.LENGTH_SHORT).show();
+                           }
+                       });
+                   }
 
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            // Toast.makeText(MainActivity.this, "Failed to unsubscribe", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
             }
 
             @Override
@@ -171,6 +171,5 @@ public class FirebasePushNotificationsService extends FirebaseMessagingService {
                 .setContentIntent(PendingIntent.getActivity(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT));
         notificationManager.notify(1, builder.build());
     }
-
 
 }
