@@ -1,6 +1,6 @@
 # Safood-Application
 
-****link for the whole exprience : https://www.youtube.com/watch?v=tzplmosuYvw ****
+#link for the whole exprience : https://www.youtube.com/watch?v=tzplmosuYvw 
 
 Safood application was developed as part of a seminar course in software engineering, 
 The application provides a solution to the problem that currently the Israeli Ministry of Health,
